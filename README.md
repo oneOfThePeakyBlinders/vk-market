@@ -1,6 +1,6 @@
 # React + TypeScript + ReduxToolkit + Vite
 
-#Тестовое задание для VK-Market
+# Тестовое задание для VK-Market
 
 Для запуска:
 - git clone "ссылка репозитория"
