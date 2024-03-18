@@ -12,6 +12,7 @@ export interface CartItem {
     price: number;
     discount: number;
     left: number;
+    desc: string
     image: string;
     amount: number;
 }

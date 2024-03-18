@@ -76,9 +76,11 @@ const Cart: React.FC<IItemsProps> = ({items}) => {
                                         ))
                                     }
                                 </Card>
-                                <Card style={{width: 300, height: 420, display: 'flex'}}>
-                                    <Title>Итого: </Title>
-                                    <Text>{items.reduce((total, item) => total + item.price * item.amount, 0)}₽</Text>
+                                <Card style={{width: 300, height: 420, display: 'flex', gap: '4px'}}>
+                                    <Div>
+                                        <Title>Итого: </Title>
+                                        <Title>{items.reduce((total, item) => total + item.price * item.amount, 0)}₽</Title>
+                                    </Div>
                                 </Card>
                             </div>
                         <Spacing size={16}/>
