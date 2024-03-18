@@ -5,7 +5,7 @@
 Деплой: https://dglfgf-5173.csb.app/
 Код: https://codesandbox.io/p/github/oneOfThePeakyBlinders/vk-market/main?import=true
 
-P.S запускайте только на компьютере и на полном экране, не стал тратить время на адаптивку
+P.S запускать лучше на компьютере и на полном экране, не стал тратить время на адаптивку
 
 Для запуска:
 - git clone "ссылка репозитория"
