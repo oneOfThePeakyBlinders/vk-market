@@ -15,7 +15,7 @@ export const cartSlice = createSlice({
         incrementItem: (state, action: PayloadAction<number>) => {
             state.cartItems.filter((item) => {
                 if(action.payload === item.id) {
-                    if(item.left !== 0) {
+                    if(item.left !== 0 && item.amount !== 10) {
                         item.amount++;
                         item.left--;
                     }
@@ -61,6 +61,6 @@ export const cartSlice = createSlice({
     }
 });
 
-//export const {incrementItem, decrementItem, removeItem} = cartSlice.actions
+export const {incrementItem, decrementItem, removeItem} = cartSlice.actions
 
 export default cartSlice.reducer
