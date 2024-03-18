@@ -19,7 +19,7 @@ import Cart from "./components/Cart/Cart.tsx";
 const App = () => {
   const platform = usePlatform();
   const dispatch= useAppDispatch();
-  const cartItems = useAppSelector((state) => state.cartReducer.cartItems);
+  const {cartItems, status} = useAppSelector((state) => state.cartReducer);
 
   React.useEffect(() => {
     dispatch(fetchCartItems());
@@ -34,7 +34,14 @@ const App = () => {
               <Panel id="main">
                 <PanelHeader before={<Icon32LogoVkColor/>}>VK-MARKET</PanelHeader>
                 <Group header={<Header mode="secondary"><Title>CART</Title></Header>}>
-                  <Cart items={cartItems}/>
+                  {status === 'loading' ? (
+                      <Title level='1' weight='3' style={{margin: 'auto'}}>Loading...</Title>
+                  ) : status === 'error' ? (
+                      <Title level='1' weight='3' style={{margin: 'auto'}}>Error loading items ):</Title>
+                  ) : (
+                      <Cart items={cartItems}/>
+                  )
+                  }
                 </Group>
               </Panel>
             </View>
