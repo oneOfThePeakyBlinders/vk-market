@@ -11,7 +11,7 @@ import {
   usePlatform, Title,
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
-import React, {useEffect} from "react";
+import React from "react";
 import {fetchCartItems} from "./features/asyncActions.ts";
 import {useAppDispatch, useAppSelector} from "./app/hooks.ts";
 import Cart from "./components/Cart/Cart.tsx";
@@ -21,7 +21,7 @@ const App = () => {
   const dispatch= useAppDispatch();
   const cartItems = useAppSelector((state) => state.cartReducer.cartItems);
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(fetchCartItems());
   }, []); // при монтировании;
 
